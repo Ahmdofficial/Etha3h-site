@@ -1,0 +1,180 @@
+import type { User, RadioTopic, RadioProgram, Category, AdminRequest } from '@/types';
+
+export const initialUsers: User[] = [
+  {
+    id: '1',
+    username: 'mushrif',
+    password: 'mushrif123',
+    role: 'superadmin',
+    name: 'المشرف',
+    isApproved: true,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: '2',
+    username: 'admin',
+    password: 'admin123',
+    role: 'admin',
+    name: 'مدير النظام',
+    isApproved: true,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: '3',
+    username: 'user',
+    password: 'user123',
+    role: 'user',
+    name: 'مستخدم عادي',
+    isApproved: true,
+    createdAt: new Date().toISOString(),
+  },
+];
+
+export const initialAdminRequests: AdminRequest[] = [];
+
+export const initialCategories: Category[] = [
+  { id: '1', name: 'ديني' },
+  { id: '2', name: 'تعليمي' },
+  { id: '3', name: 'ثقافي' },
+  { id: '4', name: 'اجتماعي' },
+  { id: '5', name: 'رياضي' },
+  { id: '6', name: 'ترفيهي' },
+  { id: '7', name: 'صحي' },
+  { id: '8', name: 'وطني' },
+];
+
+export const initialTopics: RadioTopic[] = [
+  {
+    id: '1',
+    title: 'فضل الصلاة على النبي',
+    category: 'ديني',
+    introduction: 'بسم الله الرحمن الرحيم، نستهل إذاعتنا هذا اليوم بالحديث عن فضل الصلاة على النبي محمد صلى الله عليه وسلم.',
+    quran: 'إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا (الأحزاب: 56)',
+    hadith: 'قال رسول الله صلى الله عليه وسلم: "من صلّى عليّ صلاة واحدة صلّى الله عليه عشر صلوات" (رواه مسلم)',
+    morningWord: 'الصلاة على النبي محمد صلى الله عليه وسلم من أعظم القربات إلى الله تعالى.',
+    wisdom: 'كثرة الصلاة على النبي تُذهب الهموم وتفتح الأبواب المغلقة.',
+    conclusion: 'وفي الختام، نسأل الله أن يجعلنا من أكثر الناس صلاة على نبيه الكريم.',
+    createdBy: '1',
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: '2',
+    title: 'أهمية القراءة',
+    category: 'تعليمي',
+    introduction: 'السلام عليكم ورحمة الله، موضوعنا اليوم عن أهمية القراءة في حياة الإنسان.',
+    quran: 'اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ (العلق: 1)',
+    hadith: 'قال رسول الله صلى الله عليه وسلم: "طلبوا العلم ولو في الصين"',
+    morningWord: 'القراءة نافذة العقل على العالم، وهي وسيلة اكتساب المعرفة والثقافة.',
+    wisdom: 'الكتاب خير جليس، والقراءة متعة لا تنتهي.',
+    conclusion: 'لنجعل من القراءة عادة يومية نمارسها باستمرار.',
+    createdBy: '1',
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: '3',
+    title: 'الصدق منجاة',
+    category: 'ثقافي',
+    introduction: 'موضوعنا اليوم عن الصدق وأثره في حياة الفرد والمجتمع.',
+    quran: 'يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ (التوبة: 119)',
+    hadith: 'قال رسول الله صلى الله عليه وسلم: "عليكم بالصدق فإن الصدق يهدي إلى البر" (رواه مسلم)',
+    morningWord: 'الصدق هو أساس كل فضيلة، والطريق إلى الجنة.',
+    wisdom: 'الصدق يجعل الإنسان محبوباً بين الناس، والكذب يفضح صاحبه عاجلاً أم آجلاً.',
+    conclusion: 'لنكن صادقين في أقوالنا وأفعالنا لننال رضا الله ومحبة الناس.',
+    createdBy: '1',
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: '4',
+    title: 'الرياضة والصحة',
+    category: 'صحي',
+    introduction: 'السلام عليكم، نتحدث اليوم عن أهمية الرياضة في حياتنا.',
+    quran: 'وَأَعِدُّوا لَهُمْ مَا اسْتَطَعْتُمْ مِنْ قُوَّةٍ (الأنفال: 60)',
+    hadith: 'قال رسول الله صلى الله عليه وسلم: "المؤمن القوي خير وأحب إلى الله من المؤمن الضعيف" (رواه مسلم)',
+    morningWord: 'الرياضة تساعد على تقوية الجسم وتحسين المزاج وزيادة النشاط.',
+    wisdom: 'العقل السليم في الجسم السليم.',
+    conclusion: 'لنمارس الرياضة يومياً حتى نحافظ على صحتنا ولياقتنا.',
+    createdBy: '1',
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: '5',
+    title: 'اليوم الوطني',
+    category: 'وطني',
+    introduction: 'نحتفل اليوم باليوم الوطني لبلادنا الغالية المملكة العربية السعودية.',
+    quran: 'وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا (آل عمران: 103)',
+    hadith: 'قال رسول الله صلى الله عليه وسلم: "من أصبح آمناً في سكنه" (رواه الترمذي)',
+    morningWord: 'الوطن هو الأرض التي نعيش عليها، والمجتمع الذي ننتمي إليه.',
+    wisdom: 'حب الوطن من الإيمان، والولاء للوطن واجب على كل مواطن.',
+    conclusion: 'نسأل الله أن يحفظ بلادنا ويديم عليها الأمن والاستقرار.',
+    createdBy: '1',
+    createdAt: new Date().toISOString(),
+  },
+];
+
+export const initialPrograms: RadioProgram[] = [
+  {
+    id: '1',
+    date: '2025-03-01',
+    dayName: 'السبت',
+    topicId: '1',
+    topicTitle: 'فضل الصلاة على النبي',
+    presenter: 'أحمد محمد',
+    status: 'completed',
+    notes: 'تم تقديم البرنامج بنجاح',
+  },
+  {
+    id: '2',
+    date: '2025-03-02',
+    dayName: 'الأحد',
+    topicId: '2',
+    topicTitle: 'أهمية القراءة',
+    presenter: 'عبدالله أحمد',
+    status: 'scheduled',
+    notes: '',
+  },
+  {
+    id: '3',
+    date: '2025-03-03',
+    dayName: 'الإثنين',
+    topicId: '3',
+    topicTitle: 'الصدق منجاة',
+    presenter: 'محمد علي',
+    status: 'pending',
+    notes: '',
+  },
+  {
+    id: '4',
+    date: '2025-03-04',
+    dayName: 'الثلاثاء',
+    topicId: '4',
+    topicTitle: 'الرياضة والصحة',
+    presenter: 'خالد عمر',
+    status: 'pending',
+    notes: '',
+  },
+  {
+    id: '5',
+    date: '2025-03-05',
+    dayName: 'الأربعاء',
+    topicId: '5',
+    topicTitle: 'اليوم الوطني',
+    presenter: 'سعد عبدالرحمن',
+    status: 'pending',
+    notes: '',
+  },
+];
+
+export const arabicDays = [
+  'الأحد',
+  'الإثنين',
+  'الثلاثاء',
+  'الأربعاء',
+  'الخميس',
+  'الجمعة',
+  'السبت',
+];
+
+export const arabicMonths = [
+  'يناير', 'فبراير', 'مارس', 'إبريل', 'مايو', 'يونيو',
+  'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'
+];
