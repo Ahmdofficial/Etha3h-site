@@ -10,6 +10,30 @@
     <link rel="icon" type="image/png" href="/favicon.png">
   </head>
   <body>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCZqI1TZ4Y83m-yfwl1ScEMHzjbC4pD798",
+    authDomain: "etha3h.firebaseapp.com",
+    projectId: "etha3h",
+    storageBucket: "etha3h.firebasestorage.app",
+    messagingSenderId: "395218988791",
+    appId: "1:395218988791:web:91a70c45866dbc4f806df2",
+    measurementId: "G-W28F446JG0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+    
     <div id="root"></div>
   </body>
 </html>
